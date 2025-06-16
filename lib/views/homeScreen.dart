@@ -1,5 +1,7 @@
 import 'package:fluenta/customWidgets/customRegisterButton.dart';
+import 'package:fluenta/customWidgets/customTextFeild.dart';
 import 'package:fluenta/customWidgets/fluencyCard.dart';
+import 'package:fluenta/views/erciseInProgressscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:fluenta/constants/fonts.dart';
 import 'package:fluenta/customWidgets/backgroundShape.dart';
@@ -59,7 +61,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(height: height * 0.060),
                 CustomButton(
                   text: 'Exercise',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => FluencyCoachScreen()));
+                  },
                 ),
               ],
             ),
