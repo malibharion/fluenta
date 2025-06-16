@@ -1,4 +1,6 @@
+import 'package:fluenta/constants/fonts.dart';
 import 'package:fluenta/customWidgets/backgroundShape.dart';
+import 'package:fluenta/views/homeScreen.dart';
 import 'package:flutter/material.dart';
 
 class FluencyCoachScreen extends StatelessWidget {
@@ -11,11 +13,12 @@ class FluencyCoachScreen extends StatelessWidget {
       body: CurvedGradientBackground(
         child: Column(
           children: [
-            const SizedBox(height: 30),
+            const SizedBox(height: 70),
             Text(
               "Your Fluency Coach",
               style: TextStyle(
                 fontSize: 22,
+                fontFamily: AppFonts.primary,
                 fontWeight: FontWeight.bold,
                 color: Colors.black87,
               ),
@@ -107,15 +110,23 @@ class FluencyCoachScreen extends StatelessWidget {
             const Spacer(),
             SizedBox(
               width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {},
-                child: const Text("Next Exercise"),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.purple,
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 14),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(25),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomeScreen()));
+                  },
+                  child: const Text("Next Exercise"),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.purple,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(vertical: 14),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
                 ),
               ),

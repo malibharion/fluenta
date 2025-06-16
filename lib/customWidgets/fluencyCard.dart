@@ -8,6 +8,8 @@ class FluencyCard extends StatelessWidget {
   final String title;
   final String text1;
   final String text2;
+  final GestureTapCallback onTap1;
+  final GestureTapCallback onTap2;
 
   const FluencyCard({
     required this.width,
@@ -15,6 +17,8 @@ class FluencyCard extends StatelessWidget {
     required this.imagePath,
     required this.title,
     required this.text1,
+    required this.onTap1,
+    required this.onTap2,
     required this.text2,
     super.key,
   });
@@ -67,19 +71,25 @@ class FluencyCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    text1,
-                    style: TextStyle(
-                      fontFamily: AppFonts.secondary,
-                      fontSize: width * 0.045,
+                  GestureDetector(
+                    onTap: onTap1,
+                    child: Text(
+                      text1,
+                      style: TextStyle(
+                        fontFamily: AppFonts.secondary,
+                        fontSize: width * 0.045,
+                      ),
                     ),
                   ),
                   SizedBox(height: height * 0.015),
-                  Text(
-                    text2,
-                    style: TextStyle(
-                      fontFamily: AppFonts.secondary,
-                      fontSize: width * 0.045,
+                  GestureDetector(
+                    onTap: onTap2,
+                    child: Text(
+                      text2,
+                      style: TextStyle(
+                        fontFamily: AppFonts.secondary,
+                        fontSize: width * 0.045,
+                      ),
                     ),
                   ),
                 ],

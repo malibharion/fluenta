@@ -62,7 +62,7 @@ class SplashScreen extends StatelessWidget {
               Center(
                 child: Image(
                     image: AssetImage(
-                  'assets/images/registerImg.png',
+                  'assets/images/updateImage.png',
                 )),
               ),
               Spacer(),

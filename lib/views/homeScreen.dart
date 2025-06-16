@@ -1,5 +1,3 @@
-import 'package:fluenta/customWidgets/customRegisterButton.dart';
-import 'package:fluenta/customWidgets/customTextFeild.dart';
 import 'package:fluenta/customWidgets/fluencyCard.dart';
 import 'package:fluenta/views/erciseInProgressscreen.dart';
 import 'package:flutter/material.dart';
@@ -42,6 +40,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 SizedBox(height: height * 0.010),
                 FluencyCard(
+                  onTap1: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const FluencyCoachScreen()));
+                  },
+                  onTap2: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const FluencyCoachScreen()));
+                  },
                   width: width,
                   height: height,
                   imagePath: 'assets/images/Head Profile.png',
@@ -51,6 +61,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 SizedBox(height: height * 0.020),
                 FluencyCard(
+                  onTap1: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const FluencyCoachScreen()));
+                  },
+                  onTap2: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const FluencyCoachScreen()));
+                  },
                   width: width,
                   height: height,
                   imagePath: 'assets/images/Alzheimer.png',
@@ -59,15 +81,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   text2: 'Voice Modulation',
                 ),
                 SizedBox(height: height * 0.060),
-                CustomButton(
-                  text: 'Exercise',
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => FluencyCoachScreen()));
-                  },
-                ),
               ],
             ),
           ),
